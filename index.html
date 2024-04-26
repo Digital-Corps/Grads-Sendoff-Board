@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      position: relative;
+      /* background-color: black; */
+    }
+    #basket {
+      width: 100%;
+      /* display: none; */
+      /* height: 100%; */
+      z-index: -1;
+    }
+    .child {
+      position: absolute;
+      top: 40em;
+      left: 0;
+    }
+    .child img {
+      width: 29em;
+      height: 100%;
+    }
+
+    #photo-2 {
+      position: absolute;
+      left: 79em;
+      top: 38em;
+      z-index: 3;
+      /* outline: 3px solid red; */
+    }
+    #photo-3 {
+      position: absolute;
+      left: 110em;
+      top: 41em;
+      z-index: 3;
+    }
+    #photo-4 {
+      position: absolute;
+      left: 136em;
+      top: 43em;
+      width: 36em;
+      z-index: 3;
+    }
+    #photo-5 {
+      position: absolute;
+      left: 166em;
+      top: 39em;
+      z-index: 3;
+    }
+    #photo-6 {
+      position: absolute;
+      left: 194em;
+      top: 27em;
+      z-index: 3;
+    }
+    #photo-7 {
+      position: absolute;
+      left: 66em;
+      top: 22em;
+      z-index: 2;
+      width: 36em;
+    }
+    #photo-8 {
+      position: relative;
+      left: 93em;
+      top: 28em;
+      z-index: 2;
+    }
+    #photo-9 {
+      position: relative;
+      left: 94em;
+      top: 28em;
+      z-index: 2;
+    }
+    #photo-10 {
+      position: relative;
+      left: 92em;
+      top: 28em;
+      z-index: 2;
+    }
+    #photo-11 {
+      position: relative;
+      left: 90em;
+      top: 28em;
+      z-index: 2;
+    }
+    #photo-12 {
+      position: relative;
+      left: -70em;
+      top: 28em;
+      z-index: 1;
+    }
+    #photo-13 {
+      position: relative;
+      left: -70em;
+      top: 15em;
+      z-index: 1;
+    }
+    #photo-14 {
+      position: relative;
+      left: -73em;
+      top: 11em;
+      width: 36em;
+      z-index: 1;
+    }
+    #photo-15 {
+      position: relative;
+      left: -81em;
+      top: 8em;
+      z-index: 1;
+      width: 36em;
+    }
+    #photo-16 {
+      position: absolute;
+      left: 159em;
+      top: 2em;
+      width: 36em;
+      z-index: 1;
+    }
+    #photo-17 {
+      position: relative;
+      left: 187em;
+      top: -22em;
+      z-index: 1;
+      width: 32em;
+    }
+    #coat {
+      width: 59%;
+      position: absolute;
+      top: 104em;
+      left: 74em;
+      z-index: 10;
+    }
+
+    @keyframes wiggle {
+      0% {
+        transform: rotate(-10deg);
+      }
+      50% {
+        transform: rotate(10deg);
+      }
+      100% {
+        transform: rotate(-10deg);
+      }
+    }
+
+    img.wiggle {
+      animation: wiggle 2.5s ease-in-out;
+    }
+  </style>
+  <body>
+    <div class="child">
+      <img src="./Seniors-02.svg" alt="" id="photo-2" />
+      <img src="./Seniors-03.svg" alt="" id="photo-3" />
+      <img src="./Seniors-04.svg" alt="" id="photo-4" />
+      <img src="./Seniors-05.svg" alt="" id="photo-5" />
+      <img src="./Seniors-06.svg" alt="" id="photo-6" />
+      <img src="./Seniors-07.svg" alt="" id="photo-7" />
+      <img src="./Seniors-08.svg" alt="" id="photo-8" />
+      <img src="./Seniors-09.svg" alt="" id="photo-9" />
+      <img src="./Seniors-10.svg" alt="" id="photo-10" />
+      <img src="./Seniors-11.svg" alt="" id="photo-11" />
+      <img src="./Seniors-12.svg" alt="" id="photo-12" />
+      <img src="./Seniors-13.svg" alt="" id="photo-13" />
+      <img src="./Seniors-14.svg" alt="" id="photo-14" />
+      <img src="./Seniors-15.svg" alt="" id="photo-15" />
+      <img src="./Seniors-16.svg" alt="" id="photo-16" />
+      <img src="./Seniors-17.svg" alt="" id="photo-17" />
+    </div>
+    <img src="./Asset 1.svg" alt="" id="coat" />
+    <img src="./BG Sendoff Board-01.png" alt="" id="basket" />
+  </body>
+  <script>
+    document.querySelectorAll(".child img").forEach((element) => {
+      element.addEventListener("click", () => {
+        element.classList.add("wiggle");
+        element.addEventListener("animationend", () => {
+          element.classList.remove("wiggle");
+        });
+      });
+    });
+  </script>
+</html>
